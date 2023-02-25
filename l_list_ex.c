@@ -19,6 +19,7 @@ struct ex_s *ex_s_init(int id,const char *name){
 void ex_s_free(void *ex_v){
 	struct ex_s *ex = (struct ex_s *)ex_v;
 	free(ex->name);
+	free(ex);
 }
 
 void ex_s_print(void *ex_v){
